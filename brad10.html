@@ -1,0 +1,38 @@
+<script>
+    function doCal() {
+        let op = document.getElementById("op");
+        let x = document.getElementById('x').value;
+        let y = document.getElementById('y').value;
+        x = parseInt(x); y = parseInt(y)
+        let r ='';
+        if (op.selectedIndex == 0) {
+            r = x + y;
+        } else if (op.selectedIndex == 1) {
+            r = x - y;
+        } else if (op.selectedIndex == 2) {
+            r = x * y;
+        } else if (op.selectedIndex == 3) {
+            let r1 = parseInt(x / y);
+            let r2 = x % y;
+            r = r1 + "..." + r2;
+        }
+        // let a1 = parseInt(x)+parseInt(y);
+        // x = parseInt(x);
+        // y = parseInt(y);
+        // let r = x + y;
+        // alert(r);
+
+        document.getElementById('result').innerHTML = r;
+
+    }
+</script>
+<input type="number" id="x" value="123">
+<select id="op"> //要判斷選哪一個
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+</select>
+<input type="number" id="y" value="654">
+<input type="button" value="=" onclick=doCal()>
+<span id="result"></span>
