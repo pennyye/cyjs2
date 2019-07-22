@@ -1,0 +1,14 @@
+<script>
+    function init() {
+        document.write("Hello World <br>");
+    }
+
+    function drawLine() {
+        document.write("<hr>");
+        //可以在加程式
+    }
+    let i = 0;
+    for (init(); i < 10; drawLine()) { //++在前在後都沒差
+        document.write(i++ + "<br>"); //先執行在++
+    }
+</script>

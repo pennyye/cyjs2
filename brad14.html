@@ -1,0 +1,25 @@
+<script>
+    let a = 10, b = 8;
+    switch (a) {
+        case 1:
+            document.write("A");
+            break;
+        case '10':
+            document.write("B1");
+            break;
+        case b + 2: //可放變數(在其他強型別的語言式不能的)
+            document.write("B2");
+            break;
+        case 10:
+            document.write("B3");
+            break;
+        case 100:
+            document.write("C");
+            break;
+        default: //default可以視情況放前面，不一定要放最後
+            document.write("Z");
+            break;
+
+    }
+    document.write("<hr>end");
+</script>
